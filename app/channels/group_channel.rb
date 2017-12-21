@@ -8,6 +8,6 @@ class GroupChannel < ApplicationCable::Channel
   end
 
   def speak(data)
-    ActionCable.server.broadcast 'group_channel', message: data['message']
+    Message.create!(content: data['message'])
   end
 end
