@@ -1,24 +1,20 @@
-# README
+# Setup
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+```sh
+$ git clone git@github.com:ebkn12/actioncable-chatapp.git
 
-Things you may want to cover:
+$ cd actioncable-chatapp
 
-* Ruby version
+$ bundle install --path vendor/bundle
 
-* System dependencies
+$ rails db:create
 
-* Configuration
+$ rails db:migrate
+```
 
-* Database creation
+# Usage
+```sh
+$ redis-server
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+$ rails s
+```
